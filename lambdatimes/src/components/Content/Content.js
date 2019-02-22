@@ -3,6 +3,14 @@ import Tabs from './Tabs';
 import Cards from './Cards';
 import Carousel from '../Carousel/Carousel';
 import { tabData, cardData } from '../../data';
+import styled from 'styled-components';
+
+const ContentContainer = styled.div`
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  width: 100vw;
+`;
 
 export default class Content extends Component {
   constructor(props) {
@@ -35,11 +43,11 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <ContentContainer>
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
         <Carousel />
         <Cards cards={this.filterCards()} />
-      </div>
+      </ContentContainer>
     );
   }
 }
