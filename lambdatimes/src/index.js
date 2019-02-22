@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 
-injectGlobal`
+
+const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'PT Sans';
         font-style: italic;
@@ -43,4 +44,4 @@ injectGlobal`
     }
 `;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<div><GlobalStyle /><App /></div>, document.getElementById('root'));

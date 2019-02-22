@@ -4,6 +4,8 @@ import Cards from './Cards';
 import Carousel from '../Carousel/Carousel';
 import { tabData, cardData } from '../../data';
 import styled from 'styled-components';
+import Authenticate from '../Authenticate';
+import Login from '../Login';
 
 const ContentContainer = styled.div`
   display: flex; 
@@ -12,7 +14,7 @@ const ContentContainer = styled.div`
   width: 100vw;
 `;
 
-export default class Content extends Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,3 +53,6 @@ export default class Content extends Component {
     );
   }
 }
+
+
+export default Authenticate(Content)(Login);
