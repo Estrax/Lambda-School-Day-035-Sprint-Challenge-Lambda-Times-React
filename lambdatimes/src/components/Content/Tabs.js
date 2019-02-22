@@ -13,7 +13,7 @@ const Tabs = props => {
   );
 };
 
-Tabs.PropTypes = {
+Tabs.propTypes = {
   tab: PropTypes.string,
   selectedTab: PropTypes.string,
   selectTabHandler: PropTypes.func
