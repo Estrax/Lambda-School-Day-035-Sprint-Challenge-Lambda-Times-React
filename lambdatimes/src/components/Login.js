@@ -66,7 +66,7 @@ const Login = () => {
 
   function loginUser(event){
 		event.preventDefault();
-		localStorage.setItem('username', user.username);
+    localStorage.setItem('username', user.username);
 		window.location.href = "/"
 	}
 }

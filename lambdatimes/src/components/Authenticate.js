@@ -13,6 +13,7 @@ const Authenticate = (App) => (LoginPage) =>
 			let username = localStorage.getItem('username');
 			if(username === null || username === undefined) username = "";
 			this.setState({ loggedIn: Boolean(username.trim())});
+			localStorage.setItem('loggedIn', Boolean(username.trim()));
 		}
 
 		render() {

@@ -67,6 +67,8 @@ const ContainerSpan = styled.div`
 `;
 
 const TopBar = () => {
+  console.log(localStorage.getItem('loggedIn'));
+  console.log(localStorage.getItem('username'));
   return (
     <TopBarDiv>
       <Container>
@@ -82,7 +84,7 @@ const TopBar = () => {
           <ContainerSpan center>ANNOUNCEMENTS</ContainerSpan>
         </ContainerCenter>
         <ContainerRight>
-          {localStorage.getItem('loggedIn') ? <ContainerSpan right onClick={logOut()}>LOG OUT</ContainerSpan> : <ContainerSpan right>LOG IN</ContainerSpan>}
+          {localStorage.getItem('loggedIn') ? <ContainerSpan right onClick={() => logOut()}>LOG OUT</ContainerSpan> : <ContainerSpan right>LOG IN</ContainerSpan>}
         </ContainerRight>
       </Container>
     </TopBarDiv>
@@ -90,6 +92,8 @@ const TopBar = () => {
 
   function logOut(){
     localStorage.setItem('username', '');
+    localStorage.setItem('loggedIn', '');
+    window.location.href = "/"
   }
 }
 
