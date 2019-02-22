@@ -14,6 +14,10 @@ const ContentContainer = styled.div`
   width: 100vw;
 `;
 
+const HeadingWelcome = styled.h1`
+  text-align: center;
+`;
+
 class Content extends Component {
   constructor(props) {
     super(props);
@@ -47,6 +51,7 @@ class Content extends Component {
     return (
       <ContentContainer>
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
+        <HeadingWelcome>Hello, {localStorage.getItem('username')}</HeadingWelcome>
         <Carousel />
         <Cards cards={this.filterCards()} />
       </ContentContainer>

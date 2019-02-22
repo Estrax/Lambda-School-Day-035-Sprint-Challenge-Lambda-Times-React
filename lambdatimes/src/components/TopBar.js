@@ -82,11 +82,15 @@ const TopBar = () => {
           <ContainerSpan center>ANNOUNCEMENTS</ContainerSpan>
         </ContainerCenter>
         <ContainerRight>
-          <ContainerSpan right>LOG IN</ContainerSpan>
+          {localStorage.getItem('loggedIn') ? <ContainerSpan right onClick={logOut()}>LOG OUT</ContainerSpan> : <ContainerSpan right>LOG IN</ContainerSpan>}
         </ContainerRight>
       </Container>
     </TopBarDiv>
-  )
+  );
+
+  function logOut(){
+    localStorage.setItem('username', '');
+  }
 }
 
 export default TopBar;
