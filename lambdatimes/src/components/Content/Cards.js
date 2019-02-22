@@ -8,7 +8,7 @@ const Cards = props => {
       {props.cards.map((card, i) => <Card key={i} card={card} />)}
     </div>
   )
-}
+};
 
 Cards.propTypes = {
   Cards: PropTypes.shape({
@@ -17,6 +17,6 @@ Cards.propTypes = {
     img: PropTypes.string,
     author: PropTypes.string
   })
-}
+};
 
 export default Cards;

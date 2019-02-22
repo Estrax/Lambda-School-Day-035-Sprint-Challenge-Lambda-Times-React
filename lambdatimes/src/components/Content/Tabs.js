@@ -17,6 +17,6 @@ Tabs.propTypes = {
   tab: PropTypes.string,
   selectedTab: PropTypes.string,
   selectTabHandler: PropTypes.func
-}
+};
 
 export default Tabs;
