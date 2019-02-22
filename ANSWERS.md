@@ -3,7 +3,7 @@ PropTypes are being used to make the type assertions during the runtime, based o
 
 2. Describe a life-cycle event in React?
 
-React component life-cycle contains of three phases. There is a 
+A life-cycle of React components are describing how the component and related data are being mounted and passed. The life-cycle describes all the processes (mounting, updating, unmounting) to make sure the state is being constantly updated and the object is being removed from Virtual DOM when it is not needed anymore.
 
 3. Explain the details of a Higher Order Component?
 Higher Order Component (HOC) is a technique for building reusable components that provide the business logic. They act like a wrapper for the classical components. HOCs are present in the popular React libraries such as React Router (`withRouter`) or Redux (`connect`).
